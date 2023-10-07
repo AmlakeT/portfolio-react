@@ -2,10 +2,13 @@ import React from "react";
 import unisecImg from "../assets/unisec.png";
 import { NavLink } from "react-router-dom";
 import { FiGithub } from "react-icons/fi";
-
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 const Projects = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <div className="w-full md:px-32 py-20 bg-slate-50 ">
+    <div className={`w-full md:px-32 py-20 ${!isDarkMode ? "bg-slate-50" : "bg-black text-white"}`}>
       <div className="max-w-[1240px] mx-auto">
         <div className="px-10 ">
           <h3 className="text-indigo-800 font-bold text-xl">PORTFOLIO</h3>
@@ -15,7 +18,7 @@ const Projects = () => {
           </p>
         </div>
         {/* project-1 */}
-        <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10  bg-white">
+        <div className={` w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10 ${!isDarkMode ? " bg-white " : "bg-black text-white border border-white"}`}>
           <img className=" h-[350px] w-[100%]" src={unisecImg} alt="" />
           <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
             <h1 className="font-bold text-xl text-gray-700 mb-5">
@@ -44,7 +47,7 @@ const Projects = () => {
         </div>
 
          {/* project-1 */}
-         <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10  bg-white">
+         <div className={` w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10 ${!isDarkMode ? " bg-white " : "bg-black text-white border border-white"}`}>
           <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
             <h1 className="font-bold text-xl text-gray-700 mb-5">
               UNISEC-ETHIOPIA
@@ -74,7 +77,7 @@ const Projects = () => {
         </div>
 
          {/* project-1 */}
-         <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10  bg-white">
+         <div className={` w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10 ${!isDarkMode ? " bg-white " : "bg-black text-white border border-white"}`}>
           <img className=" h-[350px] w-[100%]" src={unisecImg} alt="" />
           <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
             <h1 className="font-bold text-xl text-gray-700 mb-5">

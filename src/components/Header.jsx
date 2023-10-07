@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { ThemeContext } from "../ThemeContext";
 import {MdLightMode, MdDarkMode} from 'react-icons/md'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { ThemeContext } from "../ThemeContext";
  
 const Header = () => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -9,8 +9,9 @@ const Header = () => {
   const toggleNavBar =() =>{
       setIsNavOpen(!isNavOpen)
   }
+
   return (
-    <header className="border-b  bg-white  sticky top-0 z-10 flex items-center justify-between md:justify-around py-5 shadow-md">
+    <header className={`border-b   sticky top-0 z-10 flex items-center justify-between md:justify-around py-5 shadow-md ${!isDarkMode ? "bg-white" : "bg-black text-white border-b-white"}`}>
       <div className="">
         <button className="px-4 py-2 border  rounded " onClick={toggleTheme}>
           {!isDarkMode ? <MdDarkMode size={30} /> : <MdLightMode size={30} />}
