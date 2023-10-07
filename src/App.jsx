@@ -1,45 +1,36 @@
-import { useEffect, useState } from "react";
- 
+import { useState } from "react";
+import { ThemeContext } from "./ThemeContext";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+
 function App() {
- // how to use map and filter methods in combined form
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // const [users, setUsers] = useState([]);
-  const [show, setShow] = useState(false);
-  const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-  // useEffect(() => {
-  //   fetch("https://jsonplaceholder.typicode.com/users")
-  //     .then((response) => response.json())
-  //     .then((json) => setUsers(json));
-  // }, []);
-
-  const someFunctions = () => {
-    let numbersLessthanFive = numbers
-      .filter((number) => {
-        return number >= 5;
-      })
-      .map((square) => {
-        return square * square;
-      });
-    setNumbers(numbersLessthanFive);
-    setShow(!show);
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
   };
-  return (
-    <div className=" text-blue-600 text-center mt-32 font font-bold text-2xl ">
-      <h1>Hello, this a react starter:)</h1>
 
-      <button onClick={someFunctions}>click here</button>
-      <div className="p-10 flex flex-row justify-center">{numbers.map((number) => (
-         <p className="pr-3" key={number}>{number}</p>
-      ))}</div>
-      {show && (
-        <div>
-          {numbers.map((user) => (
-            <div key={user}>
-              <p>{user}</p>
-            </div>
-          ))}
-        </div>
-      )}
+  return (
+    <div
+      className={
+        !isDarkMode ? " h-screen" : "bg-black h-screen text-white"
+      }
+    >
+      <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+        <BrowserRouter>
+        <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<CallToAction />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeContext.Provider>
     </div>
   );
 }
