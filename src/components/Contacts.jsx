@@ -1,10 +1,12 @@
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import {GrMapLocation} from "react-icons/gr"
-
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 const Contacts = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   return (
-    <div className="py-20 px-5 md:px-32">
+    <div className={`py-20 px-5 md:px-32 ${!isDarkMode ? "bg-white" : "bg-black text-white"}`}>
       <h2 className="text-indigo-800 font-bold text-xl">Contacts</h2>
       <p className="text-2xl pt-3 font-bold text-gray-700">
         Feel free to reach out! Don't hesitate to contact me!{" "}

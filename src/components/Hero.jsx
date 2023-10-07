@@ -3,10 +3,14 @@ import htmlCss from "../assets/icons.svg";
 import jsIcon from "../assets/js.svg";
 import reactIcon from "../assets/reactIcon.svg";
 import tailwindIcon from "../assets/tailwind.svg";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 const Hero = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
-    <section className="bg-gray-100">
+    <section className={!isDarkMode ? "bg-slate-100" : "bg-black text-white"}>
       <div className="flex flex-col items-center md:justify-center md:mr-auto py-32 space-y-3">
         <h1 className="text-4xl text-center font-medium  py-3">
           Wellcome to my portfolio website
