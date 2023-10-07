@@ -7,7 +7,7 @@ import tailwindIcon from "../assets/tailwind.svg";
 const Hero = () => {
   return (
     <section className="bg-gray-100">
-      <div className="flex   flex-col items-center md:justify-center md:mr-auto py-32 space-y-3">
+      <div className="flex flex-col items-center md:justify-center md:mr-auto py-32 space-y-3">
         <h1 className="text-4xl text-center font-medium  py-3">
           Wellcome to my portfolio website
         </h1>

@@ -3,10 +3,10 @@ import { ThemeContext } from "./ThemeContext";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Contacts from "./components/Contacts";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -26,7 +26,7 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<CallToAction />} />
+            <Route path="/contact" element={<Contacts />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </BrowserRouter>

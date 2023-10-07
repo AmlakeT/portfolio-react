@@ -5,8 +5,8 @@ import pcIcon from "../assets/pc.avif";
 const About = () => {
   const { isDarkMode } = useContext(ThemeContext);
   return (
-    <section className={` w-full py-28 ${!isDarkMode ? " bg-white" : "bg-black text-white"}`}>
-      <div className="max-w-[1240] mx-5  md:mx-20  ">
+    <section className={` w-full py-36 ${!isDarkMode ? " bg-white" : "bg-black text-white"}`}>
+      <div className="max-w-[1240] mx-5  md:mx-32  ">
         <div className=" grid grid-flow-row md:grid-flow-col md:justify-center  ">
           <img className="h-80 rounded pt-8 " src={pcIcon} alt="pc icon" />
           <div className=" px-2 md:px-20  mt-3 space-y-3">
