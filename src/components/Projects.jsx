@@ -15,7 +15,7 @@ const Projects = () => {
           </p>
         </div>
         {/* project-1 */}
-        <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-10  bg-white">
+        <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10  bg-white">
           <img className=" h-[350px] w-[100%]" src={unisecImg} alt="" />
           <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
             <h1 className="font-bold text-xl text-gray-700 mb-5">
@@ -44,7 +44,7 @@ const Projects = () => {
         </div>
 
          {/* project-1 */}
-         <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-10  bg-white">
+         <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10  bg-white">
           <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
             <h1 className="font-bold text-xl text-gray-700 mb-5">
               UNISEC-ETHIOPIA
@@ -74,7 +74,7 @@ const Projects = () => {
         </div>
 
          {/* project-1 */}
-         <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-10  bg-white">
+         <div className=" w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10  bg-white">
           <img className=" h-[350px] w-[100%]" src={unisecImg} alt="" />
           <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
             <h1 className="font-bold text-xl text-gray-700 mb-5">

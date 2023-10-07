@@ -4,7 +4,7 @@ import {GrMapLocation} from "react-icons/gr"
 
 const Contacts = () => {
   return (
-    <div className="py-20 px-10">
+    <div className="py-20 px-5 md:px-32">
       <h2 className="text-indigo-800 font-bold text-xl">Contacts</h2>
       <p className="text-2xl pt-3 font-bold text-gray-700">
         Feel free to reach out! Don't hesitate to contact me!{" "}
