@@ -12,8 +12,8 @@ const Header = () => {
 
   return (
     <header className={`border-b   sticky top-0 z-10 flex items-center justify-between md:justify-around py-5 shadow-md ${!isDarkMode ? "bg-white" : "bg-black text-white border-b-white"}`}>
-      <div className="">
-        <button className="px-4 py-2 border  rounded " onClick={toggleTheme}>
+      <div className="pl-5">
+        <button className="px-4 py-2 border rounded " onClick={toggleTheme}>
           {!isDarkMode ? <MdDarkMode size={30} /> : <MdLightMode size={30} />}
         </button>
       </div>
@@ -30,7 +30,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className='block md:hidden' onClick={toggleNavBar}>
+      <div className='block pr-5 md:hidden' onClick={toggleNavBar}>
           {
             isNavOpen ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />
           }  
