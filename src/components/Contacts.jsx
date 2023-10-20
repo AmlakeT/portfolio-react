@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import {GrMapLocation} from "react-icons/gr"
+import {FcIphone} from "react-icons/fc"
 import { useContext } from "react";
 import { ThemeContext } from "../ThemeContext";
 const Contacts = () => {
@@ -30,6 +31,16 @@ const Contacts = () => {
           <div className="pl-3">
             <p className="font-bold text-lg">Location</p>
             <p className="text-gray-500">Addis Ababa, Ethiopia</p>
+          </div>
+        </div>
+        <div className="flex items-center mt-10">
+          <FcIphone
+            className="text-indigo-700 rounded-full border bg-white p-3 text-3xl "
+            size={60}
+          />
+          <div className="pl-3">
+            <p className="font-bold text-lg">Phone</p>
+            <p className="text-gray-500">+251 98 485 9942</p>
           </div>
         </div>
       </div>
