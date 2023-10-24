@@ -2,6 +2,7 @@ import React from "react";
 import unisecImg from "../assets/unisec.png";
 import newsImg from "../assets/opticNews.png";
 import dataAnalyticsImg from "../assets/data.png";
+import ecomerceImg from "../assets/ecomerce.png";
 import { Link, NavLink } from "react-router-dom";
 import { FiGithub } from "react-icons/fi";
 import { useContext } from "react";
@@ -49,7 +50,7 @@ const Projects = () => {
             </p>
             <div className="flex mt-10 space-x-6 text-xl font-medium">
               <p>React</p>
-              <p>Vanilla css</p>
+              <p>Tailwind css</p>
             </div>
             <div className="mt-16">
               <NavLink
@@ -83,7 +84,7 @@ const Projects = () => {
             </p>
             <div className="flex mt-10 space-x-6 text-xl font-medium">
               <p>React</p>
-              <p>Vanilla css</p>
+              <p>Tailwind css</p>
             </div>
             <div className="mt-16">
               <NavLink
@@ -137,6 +138,45 @@ const Projects = () => {
               </NavLink>
             </div>
           </div>
+        </div>
+
+        {/* project-4 */}
+        <div
+          className={` w-[100%] grid grid-flow-row md:grid-flow-col hover:scale-105 duration-500 mt-10 shadow-lg py-10 px-5 md:px-10 ${
+            !isDarkMode
+              ? " bg-white "
+              : "bg-black text-white border border-white"
+          }`}
+        >
+          <div className="ml-10 w-[70%] flex items-center pt-10 flex-col">
+            <h1 className="font-bold text-xl text-gray-700 mb-5">Ecomerce</h1>
+            <p className=" text-justify">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
+              cumque ratione nulla optio perspiciatis sapiente exercitationem
+              eaque molestias, impedit dolore unde fugit itaque voluptate omnis
+              consequatur laborum! Possimus, rem fuga.
+            </p>
+            <div className="flex mt-10 space-x-6 text-xl font-medium">
+              <p>React</p>
+              <p>Tailwind css</p>
+            </div>
+            <div className="mt-16">
+              <NavLink
+                to="https://github.com/AmlakeT/SHOPPING-X"
+                className="hover:text-indigo-600 flex items-center text-lg space-x-5"
+              >
+                Code
+                <FiGithub />
+              </NavLink>
+            </div>
+          </div>
+          <Link to="https://ecomerce-opal-two.vercel.app/" target="_blank">
+            <img
+              className=" h-[350px] w-[100%] border"
+              src={ecomerceImg}
+              alt=""
+            />
+          </Link>
         </div>
       </div>
     </div>
