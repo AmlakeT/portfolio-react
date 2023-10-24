@@ -11,7 +11,7 @@ const Header = () => {
   }
 
   return (
-    <header className={`border-b   sticky top-0 z-10 flex items-center justify-between md:justify-around py-5 shadow-md ${!isDarkMode ? "bg-white" : "bg-black text-white border-b-white"}`}>
+    <header className={`border-b fixed left-0 top-0 w-full z-20 flex items-center justify-between md:justify-around py-5 shadow-md ${!isDarkMode ? "bg-white" : "bg-black text-white border-b-white"}`}>
       <div className="pl-5">
         <button className="px-4 py-2 border rounded " onClick={toggleTheme}>
           {!isDarkMode ? <MdDarkMode size={30} /> : <MdLightMode size={30} />}
